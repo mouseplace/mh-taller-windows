@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller windows
-// @version      1.0.0
+// @version      1.0.1
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -38,7 +38,8 @@
 	.MHCheckoutAllRewardsPageView,
 	.treasureMapListingsView-tableView,
 	.marketplaceView-browse-content,
-	.adventureBookPopup-titleContent {
+	.adventureBookPopup-titleContent,
+	.treasureMapView-block-content.halfHeight {
 		height: auto;
 	}`;
 	document.head.appendChild(style);
