@@ -1,4 +1,4 @@
-# mh-taller-windows
+# 🐭️ MouseHunt - Taller windows
 
 A Userscript for [MouseHunt](https://mousehuntgame.com) that expands all popups and other windows to their maximum size.
 
