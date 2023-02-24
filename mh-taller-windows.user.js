@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         🐭️ MouseHunt - Taller windows
+// @name         🐭️ MouseHunt - Taller Windows
 // @version      1.1.0
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
