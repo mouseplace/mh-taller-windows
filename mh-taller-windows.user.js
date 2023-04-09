@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.1.0
+// @version      1.1.1
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -15,35 +15,35 @@
   'use strict';
 
   const style = document.createElement('style');
-  style.innerHTML = `#supplytransfer .drawer,
-  #supplytransfer .drawer .tabContent,
-  #supplytransfer .drawer .listContainer,
-  .treasureMapView-blockWrapper.tall .treasureMapView-block-content,
-  .treasureMapView-block-content.tall,
-  .treasureMapView-block-content,
+  style.innerHTML = `.adventureBookPopup-titleContent,
+  .convertibleOpenView-itemContainer,
+  .marketplaceView-browse-content,
   .MHCheckoutAllRewardsPageView,
   .treasureMapListingsView-tableView,
-  .marketplaceView-browse-content,
-  .adventureBookPopup-titleContent,
+  .treasureMapView-block-content,
   .treasureMapView-block-content.halfHeight,
-  .convertibleOpenView-itemContainer,
+  .treasureMapView-block-content.tall,
+  .treasureMapView-blockWrapper.tall .treasureMapView-block-content,
   #messengerUINotification .notificationHeader,
   #messengerUINotification .notificationMessageList,
-  .convertibleOpenView-itemContainer {
-    max-height: 75vh;
+  #supplytransfer .drawer .listContainer,
+  #supplytransfer .drawer .tabContent,
+  #supplytransfer .drawer {
     height: auto;
+    max-height: 75vh;
   }
 
   .giftSelectorView-inbox-giftContainer {
+    height: auto;
     min-height: 300px;
     max-height: 75vh;
-    height: auto;
   }
 
   .giftSelectorView-scroller {
+    height: auto;
     min-height: 320px;
     max-height: 55vh;
-    height: auto;
-  }`;
+  }
+  `;
   document.head.appendChild(style);
 })());
