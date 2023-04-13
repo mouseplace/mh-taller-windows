@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.1.2
+// @version      1.1.3
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -46,7 +46,7 @@
   }
   
   .springHuntHUD-popup-regionContainer {
-    display: content;
+    display: contents;
   }
   `;
   document.head.appendChild(style);
