@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.1.2
+// @version      1.2.0
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -33,20 +33,24 @@
     max-height: 75vh;
   }
 
-  .giftSelectorView-inbox-giftContainer {
+  .giftSelectorView-inbox-giftContainer,
+  #overlayPopup .giftSelectorView-scroller {
     height: auto;
     min-height: 300px;
     max-height: 75vh;
   }
 
-  .giftSelectorView-scroller {
-    height: auto;
-    min-height: 320px;
-    max-height: 55vh;
+  #overlayPopup.giftSelectorViewPopup {
+    top: 50px !important;
   }
-  
+
   .springHuntHUD-popup-regionContainer {
-    display: content;
+    display: contents;
+  }
+
+  #overlayPopup .imgArray {
+    max-height: 500px;
+    min-height: 105px; /* specifcally to fit scrambles at the least */
   }
   `;
   document.head.appendChild(style);
