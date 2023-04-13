@@ -44,6 +44,10 @@
     min-height: 320px;
     max-height: 55vh;
   }
+  
+  .springHuntHUD-popup-regionContainer {
+    display: content;
+  }
   `;
   document.head.appendChild(style);
 })());
