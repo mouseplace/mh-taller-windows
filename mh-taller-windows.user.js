@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.2.1
+// @version      1.2.2
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -20,7 +20,6 @@
   .marketplaceView-browse-content,
   .MHCheckoutAllRewardsPageView,
   .treasureMapListingsView-tableView,
-  .treasureMapView-block-content,
   .treasureMapView-block-content.halfHeight,
   .treasureMapView-block-content.tall,
   .treasureMapView-blockWrapper.tall .treasureMapView-block-content,
@@ -31,6 +30,16 @@
   #supplytransfer .drawer {
     height: auto;
     max-height: 75vh;
+  }
+
+  .treasureMapView-block-content {
+    height: auto;
+    max-height: 55vh;
+  }
+
+  .treasureMapDialogView.limitHeight .treasureMapDialogView-content {
+    max-height: 70vh;
+    overflow-y: visible;
   }
 
   .giftSelectorView-inbox-giftContainer,
