@@ -1,6 +1,6 @@
 # 🐭️ MouseHunt - Taller windows
 
-A Userscript for [MouseHunt](https://mousehuntgame.com) that expands all popups and other windows to their maximum size.
+A Userscript for [MouseHunt](https://mousehuntgame.com) that makes all the windows taller, so you can see more of the content without scrolling.
 
 ## Installation
 
