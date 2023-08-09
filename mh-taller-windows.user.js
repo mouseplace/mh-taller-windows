@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.2.3
+// @version      1.2.4
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -33,6 +33,14 @@
     max-height: 75vh;
   }
 
+  #supplytransfer .drawer {
+    padding-bottom: 75px;
+  }
+
+  .adventureBookPopup-titleContent {
+    max-height: unset;
+  }
+
   .treasureMapDialogView.limitHeight .treasureMapView-block-content,
   .treasureMapDialogView.limitHeight .treasureMapDialogView-content {
     max-height: 75vh;
@@ -58,81 +66,86 @@
   }
 
   #overlayPopup .imgArray {
+    min-height: 105px;
+
+    /* specifically to fit scrambles at the least */
     max-height: 500px;
-    min-height: 105px; /* specifcally to fit scrambles at the least */
   }
 
+  /* FI airship */
   .floatingIslandsWorkshop-parts-content {
     height: auto;
-    background: #ca7f39;
     background: linear-gradient(255deg, #fbf3b0 75%, #fdfcc7 100%);
-    outline: 10px solid #fbf3ae;
-    box-shadow: 0 2px 1px 11px #b9570e, 0 3px 2px 12px #985316, 0 4px 1px 13px #84420f, 0 5px 1px 14px #c47728, 0 6px 1px 15px #cd7f2c, 0 7px 1px 16px #e19439;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    outline: 10px solid #fbf3ae;
+    box-shadow: 0 2px 1px 11px #b9570e, 0 3px 2px 12px #985316, 0 4px 1px 13px #84420f, 0 5px 1px 14px #c47728, 0 6px 1px 15px #cd7f2c, 0 7px 1px 16px #e19439;
   }
 
   .floatingIslandsWorkshop-stabilizer {
-    top: 291px;
-    transform: rotate(90deg);
+    top: 325px;
     right: 78px;
     left: unset;
     border: none;
+    transform: rotate(90deg);
   }
 
   .floatingIslandsWorkshop-stabilizer label {
     color: #848383;
   }
 
-
   .floatingIslandsWorkshop-part-name {
-      position: absolute;
-      top: 0;
-      left: 0px;
-      right: 10px;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    left: 0;
   }
 
   .floatingIslandsWorkshop-part-border {
-      margin-top: 18px;
-      border-top-right-radius: 0;
-      border-top-left-radius: 0;
+    margin-top: 18px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   .floatingIslandsWorkshop-part-state a.mousehuntActionButton.tiny.lightBlue {
-      background: #fefad7;
-      box-shadow: none;
-      font-size: 9px;
+    font-size: 9px;
+    background: #fefad7;
+    box-shadow: none;
   }
 
-  .floatingIslandsWorkshop-part-state a.mousehuntActionButton.tiny.lightBlue:before {
-      background: #fff9c3;
-      box-shadow: 0 0 10px #f3ecb2 inset;
+  .floatingIslandsWorkshop-part-state a.mousehuntActionButton.tiny.lightBlue::before {
+    background: #fff9c3;
+    box-shadow: 0 0 10px #f3ecb2 inset;
   }
 
   .floatingIslandsWorkshop-parts-total {
-      margin-right: 15px;
+    margin-right: 15px;
   }
 
   .floatingIslandsWorkshop-partsContainer {
-      background-color: #fbf3ae;
-      border-radius: 5px;
+    background-color: #fbf3ae;
+    border-radius: 5px;
   }
 
   .floatingIslandsWorkshop-part.active .floatingIslandsWorkshop-part-border {
-      background-color: #90cefa;
+    background-color: #90cefa;
   }
 
   .floatingIslandsWorkshop-part-state .mousehuntActionButton.tiny.selected {
-      box-shadow: none;
+    box-shadow: none;
   }
 
   .floatingIslandsWorkshop-part-actions {
-      background-color: #c48648;
+    background-color: #c48648;
   }
 
-  .floatingIslandsWorkshop-part.active .floatingIslandsWorkshop-part-border:after {
+  .floatingIslandsWorkshop-part.active .floatingIslandsWorkshop-part-border::after {
     border: none;
   }
-  `;
+
+  /* select 2 */
+  .select2-results {
+      max-height: 50vh;
+  }`;
   document.head.appendChild(style);
 })());
