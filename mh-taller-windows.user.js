@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         🐭️ MouseHunt - Taller Windows
-// @version      1.2.4
+// @version      1.3.0
 // @description  Makes all the windows taller, so you can see more of the content without scrolling.
 // @license      MIT
 // @author       bradp
@@ -8,7 +8,8 @@
 // @match        https://www.mousehuntgame.com/*
 // @icon         https://i.mouse.rip/mouse.png
 // @grant        none
-// @run-at      document-end
+// @run-at       document-end
+// @require      https://cdn.jsdelivr.net/npm/script-migration@1.1.1
 // ==/UserScript==
 
 ((function () {
@@ -148,4 +149,6 @@
       max-height: 50vh;
   }`;
   document.head.appendChild(style);
+
+  migrateUserscript('🐭️ MouseHunt - Taller Windows', 'https://greasyfork.org/en/scripts/452235-mousehunt-taller-windows');
 })());
